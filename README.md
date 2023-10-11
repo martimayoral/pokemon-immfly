@@ -21,7 +21,8 @@ In the **charizard** example is ``/pokemon/charizard``.
 The images url is
 ``https://img.pokemondb.net/sprites/black-white/anim/normal/{name}.gif``
 For example:
-* **Charizard** <img align="center"
+* **Charizard**
+<img align="center"
 src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.g
 if"/>
 
