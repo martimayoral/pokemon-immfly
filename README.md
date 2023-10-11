@@ -14,6 +14,7 @@ Add the possibility to click on a pokemon and go to the detail page, like
 in this image:
 <img align="center" src="https://imgur.com/1Mbh6mK.png" style="border: 1px
 solid black" />
+
 Notice that the pokemon detail url is different. It is ``/pokemon/:name``.
 In the **charizard** example is ``/pokemon/charizard``.
 ### Images
@@ -23,9 +24,11 @@ For example:
 * **Charizard** <img align="center"
 src="https://img.pokemondb.net/sprites/black-white/anim/normal/charizard.g
 if"/>
+
 * **Bulbasaur** <img align="center"
 src="https://img.pokemondb.net/sprites/black-white/anim/normal/bulbasaur.g
 if" />
+
 ### Api Endpoints
 The api base url is ``https://pokeapi.co/api/v2``.
 * **List**: ``/pokemon`` (maybe you have to add the limit parameter on the
@@ -40,6 +43,7 @@ You can watch/download the video showing how the app finally should work:
 <a
 href="https://mega.nz/file/2JNVlIzb#kmmubCQEUQV0RgZ9dExTC64P_9eDNBPE8zgNNS
 -b0do" target="_blank">demo</a>.
+
 ## 🧐 We want to see 🧐
 - React knowledge (**hooks** and last features).
 - Project architecture
