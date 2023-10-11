@@ -1,3 +1,4 @@
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
 const cssRule = {
@@ -23,11 +24,18 @@ const rules = [jsRule, cssRule]
 
 module.exports = {
     output: {
-        path: path.resolve(__dirname, 'build')
+        path: path.resolve(__dirname, 'build') // to output build in /build
     },
 
     resolve: {
         extensions: ['.js', '.jsx']
     },
-    module: { rules }
+    module: { rules },
+    plugins: [
+        new HtmlWebpackPlugin({ template: 'src/index.html' }) // to create HTML file automatically
+    ],
+    devServer: {
+        open: true // to open automatically
+    },
+    devtool: 'source-map' // to debug in web console
 }
