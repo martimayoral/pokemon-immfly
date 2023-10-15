@@ -1,11 +1,13 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 
+// to load styles
 const cssRule = {
   test: /\.css$/,
   use: ['style-loader', 'css-loader']
 }
 
+// babel to load react files
 const jsRule = {
   test: /\.(js|jsx)$/,
   loader: 'babel-loader',
@@ -20,7 +22,22 @@ const jsRule = {
   }
 }
 
-const rules = [jsRule, cssRule]
+// to import files - create them inside folder assets/
+const filesRule = {
+  test: /\.(png|ico)$/,
+  use: [
+    {
+      loader: 'url-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'assets'
+      }
+    }
+  ],
+  type: 'javascript/auto'
+}
+
+const rules = [jsRule, cssRule, filesRule]
 
 module.exports = (env, argv) => {
   const isProduction = argv.mode === 'production'
@@ -36,10 +53,18 @@ module.exports = (env, argv) => {
     },
     module: { rules },
     plugins: [
-      new HtmlWebpackPlugin({ template: 'src/index.html' }) // to create HTML file automatically
+      new HtmlWebpackPlugin({
+        template: 'src/index.html',
+        favicon: 'src/assets/favicon.ico'
+      }) // to create HTML file automatically
     ],
     devServer: {
-      open: true // to open automatically
+      // open: true // to open automatically
+    },
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
     },
     devtool: 'source-map' // to debug in web console
   }
