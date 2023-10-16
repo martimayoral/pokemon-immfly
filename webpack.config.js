@@ -45,7 +45,8 @@ module.exports = (env, argv) => {
   return {
     output: {
       filename: isProduction ? '[name].[contenthash].js' : 'main.js', // to have a different build every time
-      path: path.resolve(__dirname, 'build') // to output build in /build
+      path: path.resolve(__dirname, 'build'), // to output build in /build
+      publicPath: '/'
     },
 
     resolve: {
@@ -59,6 +60,7 @@ module.exports = (env, argv) => {
       }) // to create HTML file automatically
     ],
     devServer: {
+      historyApiFallback: true // for react router to work properly
       // open: true // to open automatically
     },
     performance: {
