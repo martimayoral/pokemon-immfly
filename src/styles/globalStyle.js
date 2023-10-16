@@ -17,11 +17,12 @@ const GlobalStyle = createGlobalStyle`
 
   h3 {
     margin: 0;
+    margin-bottom: 4px;
     font-size: .75rem;
     color: ${theme.headerColor};
   }
   
-  span {
+  span, p, li {
     font-size: .85rem;
     font-weight: 600;
   }

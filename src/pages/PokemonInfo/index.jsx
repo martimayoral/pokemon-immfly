@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
 import LoadingPage from '../LoadingPage'
 import ErrorPage from '../ErrorPage'
+import SetFavouriteButton from '../../components/SetFavouriteButton'
 
 const PokemonInfoCard = styled.div`
   background-color: ${theme.cardsColor};
@@ -11,7 +12,6 @@ const PokemonInfoCard = styled.div`
   width: 250px;
   padding: 10px;
   border: 1px solid ${theme.cardsContrast};
-  border-radius: 5px;
   color: ${theme.cardsContrast};
   
   position: relative;
@@ -25,7 +25,10 @@ const InforTextContainer = styled.div`
   width: 100%;
 `
 
-const CloseButton = styled(Link)`
+const CloseButton = styled.button`
+  background: none;
+  padding: 0;
+  border: none;
   position: absolute;
   top: 10px;
   right: 10px;
@@ -37,11 +40,19 @@ const CloseButton = styled(Link)`
   }
 `
 
+const PokemonTitle = styled.span`
+  text-transform: capitalize;
+  margin-top: 10px;
+  margin-bottom: 10px;
+`
+
 const PokemonInfo = () => {
   const { name } = useParams()
   const [fetchState, setFetchState] = useState('loading')
   const [error, setError] = useState('')
   const [pokemonInfo, setPokemonInfo] = useState()
+
+  const naviagete = useNavigate()
 
   useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon/' + name)
@@ -72,19 +83,24 @@ const PokemonInfo = () => {
     return <LoadingPage />
   }
 
+  const handleClose = () => {
+    naviagete('/pokemon')
+  }
+
   let pokemonTypes = pokemonInfo.types.reduce((pr, cr) => (pr += cr.type.name + ', '), '')
   pokemonTypes = pokemonTypes.substring(0, pokemonTypes.length - 2)
 
   return (
     <PokemonInfoCard>
-      <CloseButton to='/pokemon'>x</CloseButton>
+      <CloseButton onClick={handleClose}>X</CloseButton>
       <img alt={name + ' image'} src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${name}.gif`} />
-      <span>{name}</span>
+      <PokemonTitle>{name}</PokemonTitle>
+      <SetFavouriteButton pokemonName={name} />
       <InforTextContainer>
         <p><b>ID:</b> {pokemonInfo.id}</p>
         <p><b>Type:</b> {pokemonTypes}</p>
         <p><b>Height:</b> {pokemonInfo.height}</p>
-        <p><b>Habilities:</b></p>
+        <p><b>Habilities</b></p>
         <ul>
           {pokemonInfo.abilities.map((a) => <li key={a.ability.name}>{a.ability.name}</li>)}
         </ul>
