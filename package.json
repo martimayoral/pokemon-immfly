@@ -6,8 +6,8 @@
   "scripts": {
     "build": "webpack --mode=production",
     "start": "webpack serve --mode=development",
-    "test": "jest --watch --verbose",
-    "test-coverage": "jest --coverage --collectCoverageFrom=src/**/*.{js,jsx} --watch"
+    "test": "jest",
+    "test-coverage": "jest --coverage --collectCoverageFrom=src/**/*.{js,jsx}"
   },
   "repository": {
     "type": "git",
