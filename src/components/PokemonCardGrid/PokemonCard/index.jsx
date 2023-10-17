@@ -72,7 +72,7 @@ const PokemonCard = ({ pokemonName }) => {
     <PokemonCardDiv onClick={handleClick}>
       <SetFavouriteButtonStyled pokemonName={pokemonName} />
       <ImgContainer>
-        <img alt={pokemonName + ' image'} src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemonName}.gif`} />
+        <img alt={pokemonName + ' image'} src={process.env.REACT_APP_BASE_POKEMON_IMAGE_URL + `${pokemonName}.gif`} />
       </ImgContainer>
       <PokemonHeader>{pokemonName}</PokemonHeader>
     </PokemonCardDiv>

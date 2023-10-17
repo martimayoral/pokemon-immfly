@@ -1,5 +1,9 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
+const { EnvironmentPlugin } = require('webpack')
+
+// environment variables
+require('dotenv').config()
 
 // to load styles
 const cssRule = {
@@ -57,7 +61,8 @@ module.exports = (env, argv) => {
       new HtmlWebpackPlugin({
         template: 'src/index.html',
         favicon: 'src/assets/favicon.ico'
-      }) // to create HTML file automatically
+      }), // to create HTML file automatically
+      new EnvironmentPlugin(process.env)
     ],
     devServer: {
       historyApiFallback: true, // for react router to work properly

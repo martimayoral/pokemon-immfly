@@ -55,7 +55,7 @@ const PokemonInfo = () => {
   const naviagete = useNavigate()
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/' + name)
+    fetch(process.env.REACT_APP_POKEMON_API_URL + name)
       .then((res) => {
         if (res.ok) {
           return res.json()
@@ -92,7 +92,7 @@ const PokemonInfo = () => {
   return (
     <PokemonInfoCard>
       <CloseButton onClick={handleClose}>X</CloseButton>
-      <img alt={name + ' image'} src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${name}.gif`} />
+      <img alt={name + ' image'} src={process.env.REACT_APP_BASE_POKEMON_IMAGE_URL + `${name}.gif`} />
       <PokemonTitle>{name}</PokemonTitle>
       <SetFavouriteButton pokemonName={name} />
       <InforTextContainer>

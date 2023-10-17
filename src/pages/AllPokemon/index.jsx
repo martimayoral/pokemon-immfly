@@ -10,7 +10,7 @@ const AllPokemon = () => {
   const [fetchState, setFetchState] = useState('loading')
 
   useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon?limit=151')
+    fetch(process.env.REACT_APP_POKEMON_API_URL + '?limit=151')
       .then((res) => res.json())
       .then((data) => {
         setPokemonList(data.results.map(pokemonData => pokemonData.name))
