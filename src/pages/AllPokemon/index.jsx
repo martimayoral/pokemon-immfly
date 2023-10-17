@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import HeaderImages from '../../components/HeaderImages'
 import PokemonGrid from '../../components/PokemonCardGrid/PokemonGrid'
 import { Link } from 'react-router-dom'

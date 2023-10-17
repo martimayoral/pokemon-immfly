@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
@@ -66,7 +66,6 @@ const PokemonInfo = () => {
         }
       })
       .then((data) => {
-        console.log(data)
         setPokemonInfo(data)
         setFetchState('success')
       })
@@ -100,7 +99,7 @@ const PokemonInfo = () => {
         <p><b>ID:</b> {pokemonInfo.id}</p>
         <p><b>Type:</b> {pokemonTypes}</p>
         <p><b>Height:</b> {pokemonInfo.height}</p>
-        <p><b>Habilities</b></p>
+        <p><b>Abilities</b></p>
         <ul>
           {pokemonInfo.abilities.map((a) => <li key={a.ability.name}>{a.ability.name}</li>)}
         </ul>

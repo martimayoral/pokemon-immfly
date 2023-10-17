@@ -1,13 +1,11 @@
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import HeaderImages from '../../components/HeaderImages'
 import PokemonGrid from '../../components/PokemonCardGrid/PokemonGrid'
-import { useContext } from 'react'
 import FavouritePokemonContext from '../../contexts/favouritePokemonContext'
 
 const Favourites = () => {
   const { favouriteList } = useContext(FavouritePokemonContext)
-
-  console.log('favouriteList', favouriteList)
 
   return (
     <>

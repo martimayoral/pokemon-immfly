@@ -60,8 +60,8 @@ module.exports = (env, argv) => {
       }) // to create HTML file automatically
     ],
     devServer: {
-      historyApiFallback: true // for react router to work properly
-      // open: true // to open automatically
+      historyApiFallback: true, // for react router to work properly
+      open: true // to open automatically
     },
     performance: {
       hints: false,

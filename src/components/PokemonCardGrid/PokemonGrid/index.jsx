@@ -1,7 +1,7 @@
+import React, { useState } from 'react'
 import styled from 'styled-components'
 import { deviceSizes } from '../../../styles/variables'
 import PokemonCard from '../PokemonCard'
-import { useState } from 'react'
 
 const OutterContainer = styled.div`
   position: relative;

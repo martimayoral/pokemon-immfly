@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import PokemonLogoImg from './../../assets/pokemon-logo.png'
 import ImmflyLogoImg from './../../assets/immfly-logo.png'
@@ -24,8 +25,8 @@ const PokemonLogo = styled.img`
 const HeaderImages = () => {
   return (
     <>
-      <ImmflyLogo src={ImmflyLogoImg} />
-      <PokemonLogo src={PokemonLogoImg} />
+      <ImmflyLogo alt='immfly-logo' src={ImmflyLogoImg} />
+      <PokemonLogo alt='pokemon-logo' src={PokemonLogoImg} />
     </>
   )
 }

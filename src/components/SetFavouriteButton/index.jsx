@@ -1,7 +1,8 @@
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import StarOutline from './../../assets/star-outline.png'
 import StarFilled from './../../assets/star-filled.png'
-import { useContext } from 'react'
+
 import FavouritePokemonContext from '../../contexts/favouritePokemonContext'
 
 const IconButton = styled.button`
@@ -43,7 +44,7 @@ const SetFavouriteButton = ({ pokemonName, className }) => {
 
   return (
     <IconButton className={className} onClick={handleClick}>
-      <Image src={isFav ? StarFilled : StarOutline} />
+      <Image alt={'fav-icon ' + pokemonName} src={isFav ? StarFilled : StarOutline} />
     </IconButton>
   )
 }
