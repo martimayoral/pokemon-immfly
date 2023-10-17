@@ -58,7 +58,7 @@ const PokemonGrid = ({ pokemonNameList }) => {
         </InputContainer>
         <PokemonCardContainer>
           {pokemonNameList
-            .filter((pokemonName) => pokemonName.includes(nameFilter))
+            .filter((pokemonName) => pokemonName.includes(nameFilter.toLocaleLowerCase()))
             .map((pokemonName) => {
               return <PokemonCard key={pokemonName} pokemonName={pokemonName} />
             })}
