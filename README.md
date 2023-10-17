@@ -5,7 +5,7 @@ Hello, I'm Martí Mayoral, this is my front end test. Check out the <a href="htt
 
 ## 🎬 Preview 🎬
 
-<img align="center" src="https://gyazo.com/18120a37763c79a1d67fdc4ad8c5579a" />
+<img align="center" src="https://gyazo.com/18120a37763c79a1d67fdc4ad8c5579a.gif" />
 
 ## ▶️ Run the app ▶️
 
