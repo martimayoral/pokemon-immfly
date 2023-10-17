@@ -5,7 +5,7 @@ Hello, I'm Martí Mayoral, this is my front end test.
 
 ## ▶️ Run the app ▶️
 
-I have uploaded a build of the app in [my web page](https://www.martimayo.com/demo/immfly-pokemon/) so you don't have to serve it locally to test it.
+I have uploaded a build of the app in [my web page](https://www.martimayo.com/demo/immfly/) so you don't have to serve it locally to test it.
 
 To clone it and run it locally it works like any other: Clone, install, and run (`npm start`).
 To run the tests execute  `npm test`.
