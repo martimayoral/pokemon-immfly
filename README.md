@@ -5,7 +5,7 @@ Hello, I'm Martí Mayoral, this is my front end test. Check out the <a href="htt
 
 ## 🎬 Preview 🎬
 
-[![Image from Gyazo](https://i.gyazo.com/18120a37763c79a1d67fdc4ad8c5579a.gif)](https://gyazo.com/18120a37763c79a1d67fdc4ad8c5579a)<br />
+<img align="center" src="https://gyazo.com/18120a37763c79a1d67fdc4ad8c5579a" />
 
 ## ▶️ Run the app ▶️
 
@@ -78,4 +78,4 @@ I also added a few details such as hashing the name of the output production scr
 
 Here are all the tests I did and their name:
 
-[![Image from Gyazo](https://i.gyazo.com/462c58780648e7c68a69c1add34303c5.png)](https://gyazo.com/462c58780648e7c68a69c1add34303c5)
+<img align="center" src="https://gyazo.com/462c58780648e7c68a69c1add34303c5" />
