@@ -24,29 +24,29 @@ The application is responsive, clean, with attention to detail and 3d party pack
 
 ### Bonus features
 
-### Favourite pokemon
+### 🌟 Favourite pokemon
 
 A new page has been created with the endpoint **/favourites** that allows the user to see their favourite pokemon. <br />
 To set a pokemon as favourite, the user has to click the **star ⭐** icon next to it.
 
-### Filter by name
+### 🔠 Filter by name
 
 There is a input box for the user to filter pokemons by name. There is a **x** button to clear, as it is an standard *search* input.
 
-### Styled-components
+### 💅 Styled-components
 
 Styled components have been used.
 
-### Tests
+### 🚦 Tests
 
 To be able to test I used the framework [jest](https://jestjs.io/) along with the [react testing library](https://testing-library.com/docs/react-testing-library/intro/). I created a total of 17 unit tests for the components. <br />
 There are mundane tests such as checking if the component is rendered, and also more elavorated ones that handle clicks or use Api mocks.
 
-### Linter
+### 📃 Linter
 
 The [JavaScript Standard Style](https://standardjs.com/) linter has been used.
 
-### Custom webpack
+### 🏗️ Custom webpack
 
 A custom webpack has been used (see below for more information).
 
