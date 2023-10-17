@@ -3,6 +3,10 @@
 
 Hello, I'm Martí Mayoral, this is my front end test.
 
+## 🎬 Preview 🎬
+
+[![Image from Gyazo](https://i.gyazo.com/18120a37763c79a1d67fdc4ad8c5579a.gif)](https://gyazo.com/18120a37763c79a1d67fdc4ad8c5579a)
+
 ## ▶️ Run the app ▶️
 
 I have uploaded a build of the app in [my web page](https://www.martimayo.com/demo/immfly/) so you don't have to serve it locally to test it. <br />
@@ -69,10 +73,6 @@ The project is structured by folders. Each folder containing its component and t
 It had been a while since I didnt create a custom webpack. It was interesting to use all the new updates and functionalities that it provides. <br />
 I used [webpack](https://webpack.js.org/) with the basic and standard configuration for react projects (using [@babel/preset-react](https://babeljs.io/docs/babel-preset-react)). <br />
 I also added a few details such as hashing the name of the output production script files or using a source-map to debug more easily.
-
-## 🎬 Preview 🎬
-
-[![Image from Gyazo](https://i.gyazo.com/18120a37763c79a1d67fdc4ad8c5579a.gif)](https://gyazo.com/18120a37763c79a1d67fdc4ad8c5579a)
 
 ## ♻️ Tests ♻️
 
