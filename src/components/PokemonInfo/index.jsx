@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import styled from 'styled-components'
 import { theme } from '../../styles/theme'
-import LoadingPage from '../LoadingPage'
-import ErrorPage from '../ErrorPage'
-import SetFavouriteButton from '../../components/SetFavouriteButton'
+import LoadingPage from '../../pages/LoadingPage'
+import ErrorPage from '../../pages/ErrorPage'
+import SetFavouriteButton from '../SetFavouriteButton'
 
-const PokemonInfoCard = styled.div`
+const PokemonInfoCard = styled.article`
   background-color: ${theme.cardsColor};
   margin-top: 100px;
   width: 250px;
@@ -40,10 +40,25 @@ const CloseButton = styled.button`
   }
 `
 
-const PokemonTitle = styled.span`
+const PokemonTitle = styled.h2`
   text-transform: capitalize;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-bottom: 4px;
+  font-size: .85rem;
+  font-weight: 500;
+`
+
+const PropertyHeader = styled.h3`
+  display: inline;
+`
+
+const Ul = styled.ul`
+  margin-top: 5px;
+`
+
+const Property = styled.div`
+  margin-top: 5px;
 `
 
 const PokemonInfo = () => {
@@ -96,13 +111,24 @@ const PokemonInfo = () => {
       <PokemonTitle>{name}</PokemonTitle>
       <SetFavouriteButton pokemonName={name} />
       <InforTextContainer>
-        <p><b>ID:</b> {pokemonInfo.id}</p>
-        <p><b>Type:</b> {pokemonTypes}</p>
-        <p><b>Height:</b> {pokemonInfo.height}</p>
-        <p><b>Abilities</b></p>
-        <ul>
-          {pokemonInfo.abilities.map((a) => <li key={a.ability.name}>{a.ability.name}</li>)}
-        </ul>
+        <Property>
+          <PropertyHeader>ID:</PropertyHeader>
+          <span>{pokemonInfo.id}</span>
+        </Property>
+        <Property>
+          <PropertyHeader>Type:</PropertyHeader>
+          <span>{pokemonTypes}</span>
+        </Property>
+        <Property>
+          <PropertyHeader>Height:</PropertyHeader>
+          <span>{pokemonInfo.height}</span>
+        </Property>
+        <Property>
+          <PropertyHeader>Abilities</PropertyHeader>
+          <Ul>
+            {pokemonInfo.abilities.map((a) => <li key={a.ability.name}>{a.ability.name}</li>)}
+          </Ul>
+        </Property>
       </InforTextContainer>
     </PokemonInfoCard>
   )

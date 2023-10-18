@@ -5,7 +5,7 @@ import { deviceSizes } from '../../../styles/variables'
 import { useNavigate } from 'react-router-dom'
 import SetFavouriteButton from '../../SetFavouriteButton'
 
-const PokemonCardDiv = styled.div`
+const PokemonCardArticle = styled.article`
   background-color: ${theme.cardsColor};
   height: 120px;
   margin-bottom: 10px;
@@ -51,8 +51,9 @@ const ImgContainer = styled.div`
   justify-content: center;
 `
 
-const PokemonHeader = styled.span`
+const PokemonHeader = styled.h4`
   text-transform: capitalize;
+  font-weight: 600;
 `
 
 const SetFavouriteButtonStyled = styled(SetFavouriteButton)`
@@ -68,14 +69,24 @@ const PokemonCard = ({ pokemonName }) => {
     navigate('/pokemon/' + pokemonName)
   }
 
+  const handleKeyDown = (e) => {
+    if (e.target.tagName === e.currentTarget.tagName && e.key === 'Enter') { handleClick() }
+  }
+
   return (
-    <PokemonCardDiv onClick={handleClick}>
+    <PokemonCardArticle
+      aria-label={'pokemon ' + pokemonName}
+      onClick={handleClick}
+      onKeyDown={handleKeyDown}
+      tabIndex={0}
+      role='button'
+    >
       <SetFavouriteButtonStyled pokemonName={pokemonName} />
       <ImgContainer>
         <img alt={pokemonName + ' image'} src={process.env.REACT_APP_BASE_POKEMON_IMAGE_URL + `${pokemonName}.gif`} />
       </ImgContainer>
       <PokemonHeader>{pokemonName}</PokemonHeader>
-    </PokemonCardDiv>
+    </PokemonCardArticle>
   )
 }
 

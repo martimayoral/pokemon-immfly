@@ -21,9 +21,16 @@ const GlobalStyle = createGlobalStyle`
     font-size: .75rem;
     color: ${theme.headerColor};
   }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+    font-size: .85rem;
+    font-weight: 600;
+  }
   
   span, p, li {
-    font-size: .85rem;
+    font-size: .8rem;
     font-weight: 600;
   }
 `

@@ -4,6 +4,8 @@ import PokemonGrid from '../../components/PokemonCardGrid/PokemonGrid'
 import { Link } from 'react-router-dom'
 import LoadingPage from '../LoadingPage'
 import ErrorPage from '../ErrorPage'
+import HeaderContent from '../../components/Styled/HeaderContent'
+import MainContent from '../../components/Styled/MainContent'
 
 const AllPokemon = () => {
   const [pokemonList, setPokemonList] = useState([])
@@ -31,11 +33,15 @@ const AllPokemon = () => {
 
   return (
     <>
-      <HeaderImages />
-      <h2>Generation 1</h2>
-      <h3>151 pokemon</h3>
-      <h3><Link to='/favourites'>See favorites</Link></h3>
-      <PokemonGrid pokemonNameList={pokemonList} />
+      <HeaderContent>
+        <HeaderImages />
+        <h2>Generation 1</h2>
+        <h3>151 pokemon</h3>
+        <h3><Link to='/favourites'>See favorites</Link></h3>
+      </HeaderContent>
+      <MainContent>
+        <PokemonGrid pokemonNameList={pokemonList} />
+      </MainContent>
     </>
   )
 }
