@@ -75,6 +75,12 @@ It had been a while since I didnt create a custom webpack. It was interesting to
 I used [webpack](https://webpack.js.org/) with the basic and standard configuration for react projects (using [@babel/preset-react](https://babeljs.io/docs/babel-preset-react)). <br />
 I also added a few details such as hashing the name of the output production script files or using a source-map to debug more easily.
 
+## ♿ Accessibility ♿
+
+I had a bit of extra time so i polished the accessibility of the app:
+
+[![Image from Gyazo](https://i.gyazo.com/f54d725fc54c68bc2c105777c6d708f5.gif)](https://gyazo.com/f54d725fc54c68bc2c105777c6d708f5)
+
 ## ♻️ Tests ♻️
 
 Here are all the tests I did and their name:
